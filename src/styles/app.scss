@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+h3,h4{
+    font-weight: 400;
+    color: rgb(100, 100, 100)
+}
+h1,
+h2,
+h3{
+    color: rgb(54, 54, 54);
+}
+
+.App{
+    transition: all 0.5s ease;
+}
+.library-active{
+    margin-left: 30%;
+}
+
+.volume-container{
+    padding: 0.5rem;
+    display:flex;
+    justify-content: center;
+    button{
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        border: 2px solid rgb(65, 65, 65);
+        padding: 0.3rem;
+        transition: all 0.3s ease;
+        outline: none;
+        &:hover{
+            background: rgb(65, 65, 65);
+            color: white;
+        }
+    }  
+}
+.bar-container{
+    padding: 0.1rem 0.1rem 0rem 2rem;
+}
+#volume[type=range]{
+    -webkit-appearance: none;
+}
+
+#volume[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+
+#volume[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    border: 3px solid rgb(65, 65, 65);
+    background: white;
+    margin-top: -5px;
+         &:hover{
+             background-color: rgb(65, 65, 65);
+             border: 3px solid white;
+    }
+}
+
+#volume[type="range"]::-webkit-slider-runnable-track{
+    background: rgb(65, 65, 65);
+}
+
+
+@import "./song";
+@import "./player";
+@import "./library";
+@import "./nav";
